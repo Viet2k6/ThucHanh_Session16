@@ -9,6 +9,11 @@ public class Main{
         repo.add(new FoodProduct("03", "Bánh quy", 10000.0,6));
 
         System.out.println("--- Danh sách sản phẩm---");
+        for (Product p : repo.findAll()) {
+            p.displayInfo();
+            System.out.println("Thành tiền: " + p.calculateFinalPrice());
+            System.out.println("--------------------");
+        }
 
     }
 }
